@@ -31,7 +31,6 @@ public class FloorCutTreeDriver {
             floortree.create_root(directive[1]);
 
         }else if(directive[0].equals("cut-h")){
-            return
             floortree.cut_horizontal( directive[1] , directive[2] , directive[3] );
         
         }else if(directive[0].equals("cut-v")){
@@ -70,7 +69,7 @@ public class FloorCutTreeDriver {
      */
     private static void directiveParser(String sentence){
         
-        String[] array = sentence.split("\t");
+        String[] array = sentence.split("\\s+");
         readDirective(array);
 
     }
