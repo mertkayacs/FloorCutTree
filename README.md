@@ -26,6 +26,13 @@
   <a href="https://mertkayacs.com/?utm_source=github&utm_medium=readme&utm_campaign=FloorCutTree-repo&utm_content=portfolio-badge"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-1E2A38?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIvPjxwYXRoIGQ9Ik0xMiAyYTE0LjUgMTQuNSAwIDAgMCAwIDIwYTE0LjUgMTQuNSAwIDAgMCAwLTIwTTIgMTJoMjAiLz48L2c%2BPC9zdmc%2B&logoColor=white"></a>
 </p>
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/hero-dark.webp">
+    <img src="docs/assets/readme/hero-light.webp" alt="Terminal showing the last two trees printed by FloorCutTreeDriver, before and after compact" width="960">
+  </picture>
+</p>
+
 FloorCutTree models a cut floorplan, which is a rectangle divided by horizontal and vertical cuts into smaller rooms. Each room is a node in a binary tree. After you assign widths and heights to the rooms, compact finds the minimum width and height of every room that contains smaller rooms. A driver program runs directives from a text file, and display prints the tree.
 
 ---
@@ -39,6 +46,49 @@ The program turns a floor plan into a tree and works out the smallest layout.
 | <img src="docs/assets/readme/icons/scissors-line-dashed.svg" width="18" height="18" alt=""> **Cuts as tree nodes** | Each cut splits one room into two. Horizontal and vertical cuts are separate operations on a binary tree. |
 | <img src="docs/assets/readme/icons/file-input.svg" width="18" height="18" alt=""> **Scripted input** | [FloorCutTreeDriver.java](FloorCutTreeDriver.java) reads one directive per line from a text file named test-hw3.txt. |
 | <img src="docs/assets/readme/icons/boxes.svg" width="18" height="18" alt=""> **Layered tree classes** | FloorCutTree extends LinkedBinaryTree, which builds on the Tree, BinaryTree and Position classes in the same folder. |
+
+## A quick tour
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/script-dark.webp">
+        <img src="docs/assets/readme/tour/script-light.webp" alt="Code card showing the first lines of test-hw3.txt">
+      </picture>
+      <h3>Directive script</h3>
+      The first 24 lines of test-hw3.txt: create the root, cut it, assign sizes, display and compact.
+    </td>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/first-dark.webp">
+        <img src="docs/assets/readme/tour/first-light.webp" alt="Terminal showing the head of the script and the first printed trees">
+      </picture>
+      <h3>First display</h3>
+      The start of the script and the first tree the driver prints.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/compact-dark.webp">
+        <img src="docs/assets/readme/tour/compact-light.webp" alt="Terminal showing two printed trees before and after compact">
+      </picture>
+      <h3>After compact</h3>
+      Compact fills in the size of the cut rooms. The inner vertical cut goes from 0 by 0 to 70 by 30.
+    </td>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/code-dark.webp">
+        <img src="docs/assets/readme/tour/code-light.webp" alt="Code card showing compactAux in FloorCutTree.java">
+      </picture>
+      <h3>Bottom-up sizes</h3>
+      compactAux visits the left and right rooms first and uses their sizes for the cut above them.
+    </td>
+  </tr>
+</table>
+
+<p align="center"><sub>The terminal cards show real output of the driver with the bundled script. The other cards show files as they are in the repository.</sub></p>
 
 ## Features
 
