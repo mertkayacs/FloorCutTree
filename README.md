@@ -71,11 +71,11 @@ The program turns a floor plan into a tree and works out the smallest layout.
   <tr>
     <td width="50%" valign="top">
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/compact-dark.webp">
-        <img src="docs/assets/readme/tour/compact-light.webp" alt="Terminal showing two printed trees before and after compact">
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/driver-dark.webp">
+        <img src="docs/assets/readme/tour/driver-light.webp" alt="Code card showing readDirective in FloorCutTreeDriver.java">
       </picture>
-      <h3>After compact</h3>
-      Compact fills in the size of the cut rooms. The inner vertical cut goes from 0 by 0 to 70 by 30.
+      <h3>Directive dispatch</h3>
+      The driver turns each script line into a call on the tree, such as create-root, cut-h, cut-v and assign-w.
     </td>
     <td width="50%" valign="top">
       <picture>
@@ -88,7 +88,7 @@ The program turns a floor plan into a tree and works out the smallest layout.
   </tr>
 </table>
 
-<p align="center"><sub>The terminal cards show real output of the driver with the bundled script. The other cards show files as they are in the repository.</sub></p>
+<p align="center"><sub>The terminal card shows real output of the driver with the bundled script. The other cards show files as they are in the repository.</sub></p>
 
 ## Features
 
